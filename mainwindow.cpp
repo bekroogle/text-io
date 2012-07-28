@@ -17,3 +17,12 @@ void MainWindow::on_action_New_triggered()
 {
     ui->plainTextEdit->clear();
 }
+
+void MainWindow::on_action_Open_triggered()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,
+                                                    "Open Configuration File.",
+                                                    "/home",
+                                                    "All Files (*.*)");
+    qDebug() << fileName;
+}

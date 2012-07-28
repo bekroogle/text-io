@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtGui/QFileDialog>
+#include <QtDebug>
 
 namespace Ui {
 class MainWindow;
@@ -18,8 +20,11 @@ public:
 private slots:
     void on_action_New_triggered();
 
+    void on_action_Open_triggered();
+
 private:
     Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H
