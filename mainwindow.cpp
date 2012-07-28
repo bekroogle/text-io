@@ -41,9 +41,29 @@ void MainWindow::on_action_Open_triggered()
 
     // Put the QString into the text editor window.
     ui->plainTextEdit->insertPlainText(buf);
+
+    // Close the file.
+    inFile->close();
 }
 
 void MainWindow::on_actionE_xit_triggered()
 {
-    this->close();
+    // Close the application.
+    close();
+}
+
+void MainWindow::on_action_Save_triggered()
+{
+    // Get a file name from a Save file dialog.
+    QString fileName = QFileDialog::getSaveFileName(this,
+                                                    "Save File...",
+                                                    "/home",
+                                                    "All Files (*.*)");
+    QFile *outFile = new QFile(fileName);
+
+    if (!outFile->open(QIODevice::WriteOnly | QIODevice::Text))
+        return;
+
+    QTextStream out(outFile);
+         out << ui->plainTextEdit->toPlainText();
 }
