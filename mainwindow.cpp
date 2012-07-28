@@ -12,3 +12,8 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_action_New_triggered()
+{
+    ui->plainTextEdit->clear();
+}
