@@ -25,4 +25,15 @@ void MainWindow::on_action_Open_triggered()
                                                     "/home",
                                                     "All Files (*.*)");
     qDebug() << fileName;
+    QFile *inFile = new QFile(fileName);
+
+    if (!inFile->open(QIODevice::ReadOnly | QIODevice::Text))
+        return;
+
+    QString buf;
+    while (!inFile->atEnd()) {
+        buf.append(inFile->readLine());
+    }
+
+    ui->plainTextEdit->insertPlainText(buf);
 }
