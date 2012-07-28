@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QtGui/QFileDialog>
+#include <QPlainTextEdit>
 #include <QtDebug>
 #include <aboutdialog.h>
 
@@ -29,9 +30,13 @@ private slots:
 
     void on_action_About_triggered();
 
+    void on_actionSelect_All_triggered();
+
+    void on_action_Deselect_All_triggered();
+
 private:
     Ui::MainWindow *ui;
-
+    QTextCursor * crsr;
 };
 
 #endif // MAINWINDOW_H

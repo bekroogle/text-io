@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+    ui->plainTextEdit->setTextCursor(*crsr);
 }
 
 void MainWindow::on_action_New_triggered()
@@ -75,4 +76,15 @@ void MainWindow::on_action_About_triggered()
 {
     AboutDialog *aboutDialog = new AboutDialog(this);
     aboutDialog->show();
+}
+
+void MainWindow::on_actionSelect_All_triggered()
+{
+    ui->plainTextEdit->selectAll();
+}
+
+void MainWindow::on_action_Deselect_All_triggered()
+{
+    crsr = new QTextCursor();
+    ui->plainTextEdit->setTextCursor(*crsr);
 }
