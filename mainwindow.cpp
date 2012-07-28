@@ -42,3 +42,8 @@ void MainWindow::on_action_Open_triggered()
     // Put the QString into the text editor window.
     ui->plainTextEdit->insertPlainText(buf);
 }
+
+void MainWindow::on_actionE_xit_triggered()
+{
+    this->close();
+}
