@@ -59,11 +59,20 @@ void MainWindow::on_action_Save_triggered()
                                                     "Save File...",
                                                     "/home",
                                                     "All Files (*.*)");
+
+    // Open the file for output.
     QFile *outFile = new QFile(fileName);
 
     if (!outFile->open(QIODevice::WriteOnly | QIODevice::Text))
         return;
 
+    // Send the text editor's plain text to the output stream.
     QTextStream out(outFile);
          out << ui->plainTextEdit->toPlainText();
+}
+
+void MainWindow::on_action_About_triggered()
+{
+    AboutDialog *aboutDialog = new AboutDialog(this);
+    aboutDialog->show();
 }
