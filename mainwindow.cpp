@@ -103,3 +103,13 @@ void MainWindow::on_actionPaste_triggered()
 {
     ui->plainTextEdit->paste();
 }
+
+void MainWindow::on_action_Undo_triggered()
+{
+    ui->plainTextEdit->undo();
+}
+
+void MainWindow::on_action_Redo_triggered()
+{
+    ui->plainTextEdit->redo();
+}
