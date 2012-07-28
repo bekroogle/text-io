@@ -34,8 +34,10 @@
      <string>&amp;File</string>
     </property>
     <addaction name="action_New"/>
+    <addaction name="separator"/>
     <addaction name="action_Open"/>
     <addaction name="action_Save"/>
+    <addaction name="separator"/>
     <addaction name="actionE_xit"/>
    </widget>
    <widget class="QMenu" name="menu_Help">
@@ -68,7 +70,7 @@
   </action>
   <action name="action_Save">
    <property name="text">
-    <string>&amp;Save</string>
+    <string>&amp;Save As...</string>
    </property>
   </action>
   <action name="actionE_xit">

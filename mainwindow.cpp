@@ -56,7 +56,7 @@ void MainWindow::on_action_Save_triggered()
 {
     // Get a file name from a Save file dialog.
     QString fileName = QFileDialog::getSaveFileName(this,
-                                                    "Save File...",
+                                                    "Save File As...",
                                                     "/home",
                                                     "All Files (*.*)");
 
