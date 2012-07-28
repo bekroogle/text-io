@@ -88,3 +88,18 @@ void MainWindow::on_action_Deselect_All_triggered()
     crsr = new QTextCursor();
     ui->plainTextEdit->setTextCursor(*crsr);
 }
+
+void MainWindow::on_action_Cut_triggered()
+{
+    ui->plainTextEdit->cut();
+}
+
+void MainWindow::on_action_Copy_triggered()
+{
+    ui->plainTextEdit->copy();
+}
+
+void MainWindow::on_actionPaste_triggered()
+{
+    ui->plainTextEdit->paste();
+}

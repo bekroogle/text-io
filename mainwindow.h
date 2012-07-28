@@ -34,6 +34,12 @@ private slots:
 
     void on_action_Deselect_All_triggered();
 
+    void on_action_Cut_triggered();
+
+    void on_action_Copy_triggered();
+
+    void on_actionPaste_triggered();
+
 private:
     Ui::MainWindow *ui;
     QTextCursor * crsr;
